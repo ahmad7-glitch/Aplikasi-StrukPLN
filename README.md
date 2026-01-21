@@ -218,6 +218,6 @@ Untuk bantuan, saran, atau laporan bug:
 
 ---
 
-**Made with ❤️ by [Your Name]**
+**Made with ❤️ by [Ahmad Digital]**
 
-*Last Updated: January 2024*
+*Last Updated: January 2026*
