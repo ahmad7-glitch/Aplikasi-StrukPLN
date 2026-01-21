@@ -1,0 +1,60 @@
+================================================================
+    PANDUAN CEPAT - APLIKASI STRUK PLN PASCABAYAR
+================================================================
+
+📌 LANGKAH PERTAMA KALI (Hanya 1x)
+==================================
+1. Pastikan Python sudah terinstall
+   - Download: https://www.python.org/downloads/
+   
+2. Install Dependencies
+   - Double-click: install_dependencies.bat
+   - Tunggu sampai selesai
+
+
+🚀 CARA MENJALANKAN APLIKASI
+============================
+- Double-click: run_struk_pln.bat
+- Atau ketik: python pln_pascabayar_struk_final_tampilan_rapi.py
+
+
+💾 CARA MEMBUAT FILE .EXE (Portable)
+====================================
+1. Double-click: build_exe.bat
+2. Tunggu 2-3 menit
+3. File StrukPLN.exe ada di folder "dist"
+4. Copy file .exe ke komputer lain (tanpa Python)
+
+
+📖 CARA MENGGUNAKAN
+===================
+1. Pilih ID Pelanggan atau Nama dari dropdown
+2. Isi data tagihan (Tarif, Daya, Tagihan, Admin)
+3. Total bayar otomatis terhitung
+4. Klik "Generate Struk" untuk preview
+5. Klik "Simpan PDF" untuk export
+6. Klik "Print" untuk cetak ke printer
+
+
+❓ JIKA ADA MASALAH
+==================
+1. Aplikasi tidak bisa dibuka
+   → Jalankan: install_dependencies.bat
+   
+2. Error saat build .exe
+   → Hapus folder "build" dan "dist", lalu coba lagi
+   
+3. PDF tidak bisa dibuat
+   → Buka CMD, ketik: pip install reportlab
+   
+4. Font emoji tidak muncul
+   → Update Windows ke versi terbaru
+
+
+📞 BANTUAN
+=========
+Baca file: README.md (dokumentasi lengkap)
+
+================================================================
+    Selamat Menggunakan! 🎉
+================================================================

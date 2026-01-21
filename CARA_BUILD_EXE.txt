@@ -1,0 +1,96 @@
+================================================================
+    CARA BUILD EXECUTABLE (.EXE) - MANUAL
+    Aplikasi Struk PLN Pascabayar
+================================================================
+
+MASALAH:
+--------
+PyInstaller tidak dikenali karena tidak ada di PATH Windows.
+
+SOLUSI 1: Build dengan Python Module (RECOMMENDED)
+----------------------------------------------------
+1. Buka Command Prompt (CMD) di folder aplikasi
+2. Jalankan command berikut:
+
+   python -m pip install pyinstaller reportlab
+   python -m PyInstaller --onefile --windowed --name "StrukPLN" pln_pascabayar_struk_final_tampilan_rapi.py
+
+3. File .exe akan ada di folder: dist\StrukPLN.exe
+
+
+SOLUSI 2: Tambahkan PATH PyInstaller ke Windows
+------------------------------------------------
+1. Cari lokasi PyInstaller:
+   - Biasanya di: C:\Users\user\AppData\Roaming\Python\Python313\Scripts
+   
+2. Tambahkan ke PATH Windows:
+   a. Klik kanan "This PC" > Properties
+   b. Advanced system settings > Environment Variables
+   c. Edit "Path" di User variables
+   d. Tambahkan: C:\Users\user\AppData\Roaming\Python\Python313\Scripts
+   e. Klik OK semua
+   f. Restart CMD
+   
+3. Sekarang jalankan:
+   pyinstaller --onefile --windowed --name "StrukPLN" pln_pascabayar_struk_final_tampilan_rapi.py
+
+
+SOLUSI 3: Double-click build_exe_simple.bat
+--------------------------------------------
+1. Jalankan file: build_exe_simple.bat
+2. File sudah diperbaiki untuk menghindari masalah PATH
+
+
+OPSI BUILD LAINNYA:
+-------------------
+
+BUILD DENGAN ICON (Jika punya file .ico):
+python -m PyInstaller --onefile --windowed --icon="icon.ico" --name "StrukPLN" pln_pascabayar_struk_final_tampilan_rapi.py
+
+BUILD DENGAN CONSOLE (Untuk debugging):
+python -m PyInstaller --onefile --console --name "StrukPLN" pln_pascabayar_struk_final_tampilan_rapi.py
+
+BUILD DENGAN SPLASH SCREEN:
+python -m PyInstaller --onefile --windowed --splash="splash.png" --name "StrukPLN" pln_pascabayar_struk_final_tampilan_rapi.py
+
+
+TROUBLESHOOTING:
+---------------
+
+Q: File .exe terlalu besar (30-40 MB)?
+A: Normal! Karena berisi Python runtime lengkap. Bisa dikecilkan dengan:
+   - Gunakan UPX compression: --upx-dir="path/to/upx"
+   - Atau biarkan saja, karena portable dan tidak perlu install Python
+
+Q: Antivirus mendeteksi virus?
+A: False positive. Tandai sebagai safe atau exclude folder dist
+
+Q: .exe tidak jalan di komputer lain?
+A: Pastikan build dengan --windowed dan copy semua file di folder dist
+
+Q: Error saat import module?
+A: Gunakan --hidden-import:
+   python -m PyInstaller --onefile --windowed --hidden-import=reportlab --name "StrukPLN" pln_pascabayar_struk_final_tampilan_rapi.py
+
+
+HASIL BUILD:
+-----------
+dist\
+  └── StrukPLN.exe  <-- File executable (portable, tidak perlu install)
+
+build\
+  └── [temp files]   <-- Bisa dihapus setelah build
+
+StrukPLN.spec        <-- Spec file (bisa dihapus)
+
+
+DISTRIBUSI:
+-----------
+1. Copy file StrukPLN.exe dari folder dist
+2. Kirim/share ke komputer lain
+3. Double-click untuk menjalankan (tidak perlu Python!)
+
+
+================================================================
+    Selamat Menggunakan! 🎉
+================================================================
