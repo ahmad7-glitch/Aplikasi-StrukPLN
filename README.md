@@ -108,10 +108,10 @@ Aplikasi-StrukPLN/
 ## 🎨 Screenshot
 
 ### Tampilan Utama
-![Main Interface](screenshot_main.png)
+![Main Interface](https://i.ibb.co.com/CKFcY1c6/Tampilan-awal-Struk-PLN.png)
 
 ### Preview Print
-![Print Preview](screenshot_preview.png)
+![Print Preview](https://i.ibb.co.com/jnNFrGS/Tampilan-Print-Preview-Struk-PLN.png)
 
 ## 🔧 Troubleshooting
 
